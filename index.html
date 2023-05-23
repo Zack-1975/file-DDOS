@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/6.2.10/js/tempus-dominus.js" integrity="sha512-M1nRraFe0fQ2MyPlesmjWHTJtaPgA81UH+QVOlw/kR7Hv+B8g6oTiT2Yh5Seb9YinuI2RsOHlZJ9+aLlRc6kgQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+<style>
+ .search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+.search-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.wrapper p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wrapper.active p {
+  white-space: normal;
+  overflow: visible;
+}
+
+
+.wrapper .less {
+  display: none;
+}
+
+.wrapper.active .less {
+  display: inline;
+}
+
+.wrapper.active .more {
+  display: none;
+}
+</style>
+<body>
+  <!-- <a class="purple-head hover-black" onclick="changeIcon(this)" id="myBtn"> -->
+    <!-- <i id="faPlus" class="fa fa-plus font-xs"></i> -->
+    <!-- <span>Read more</span> -->
+    <!-- <a class="purple-head hover-black" onclick="changeIcon(this)" id="myBtn"> -->
+      <!-- <i id="faPlus" class="fa fa-plus font-xs"></i> -->
+      <!-- <span>Read more</span> -->
+      <!-- <a class="purple-head hover-black" onclick="changeIcon(this)" id="myBtn"> -->
+        <!-- <i id="faPlus" class="fa fa-plus font-xs"></i> -->
+        <!-- <span>Read more</span> -->
+      <!-- </a> -->
+    <!-- </a> -->
+  <!-- </a> -->
+   <!-- <input type="date" class="form-control" name="Datebirth" id="Datebirth" placeholder="Ngày tháng năm sinh" title="Ngày tháng năm sinh" required=""> -->
+   <form class="search-form">
+  <input type="text" class="search-input" placeholder="Nhập từ khóa tìm kiếm">
+  <button type="submit" class="search-button">Tìm kiếm</button>
+</form>
+
+   
+   <div class="container">
+   <div class="row">
+      <div class='col-sm-6'>
+         <div class="form-group">
+            <div class='input-group date' id='datetimepicker1'>
+               <input type='date' class="form-control" />
+               <span class="input-group-addon">
+               <span class="glyphicon glyphicon-calendar"></span>
+               </span>
+            </div>
+         </div>
+      </div>
+     <script>
+//     function changeIcon(anchor) {
+//   var icon = anchor.querySelector("i");
+//   icon.classList.toggle('fa-plus');
+//   icon.classList.toggle('fa-minus');
+
+//    anchor.querySelector("span").textContent = icon.classList.contains('fa-plus') ? "Read more" : "Read less";
+// }
+function changeIcon(anchor) {
+  var icon = anchor.querySelector("i");
+  icon.classList.toggle('fa-plus');
+  icon.classList.toggle('fa-minus');
+
+   anchor.querySelector("span").textContent = icon.classList.contains('fa-plus') ? "Read more" : "Read less";
+}
+
+(function ($) {
+$.fn.datetimepicker.dates['vi'] = {
+ days: ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy", "Chủ Nhật"],
+daysShort: ["CN", "T2", "T3", "T4", "T5", "T6", "T7", "CN"],
+aysMin: ["CN", "T2", "T3", "T4", "T5", "T6", "T7", "CN"],
+months: ["Tháng Một", "Tháng Hai", "Tháng Ba", "Tháng Tư", "Tháng Năm", "Tháng Sáu", "Tháng Bảy", "Tháng Tám", "Tháng Chín", "Tháng Mười", "Tháng Mười Một", "Tháng Mười Hai"],
+monthsShort: ["Th.1", "Th.2", "Th.3", "Th.4", "Th.5", "Th.6", "Th.7", "Th.8", "Th.9", "Th.10", "Th.11", "Th.12"],
+ today: "Hôm Nay",
+   suffix: [],
+          meridiem: ["Sáng", "Chiều"],
+           weekStart: 1,
+    format: "dd/mm/yyyy hh:ii"
+        };
+    });
+</script>
+   </div>
+</div>
+</body>
+
+</html>
